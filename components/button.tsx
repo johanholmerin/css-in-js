@@ -1,23 +1,8 @@
 import style9 from "style9";
 
-// @todo cannot use Enums/Objects
-const BLUE = "dodgerblue";
-const GREEN = "#57b004";
-const GREY = "#cccccc";
-const RED = "#db2e02";
-const YELLOW = "#e3b307";
-
-const Color = {
-  grey: GREY,
-  blue: BLUE,
-  yellow: YELLOW,
-  green: GREEN,
-  red: RED,
-};
-
 type Props = {
   children: string;
-  color?: keyof typeof Color;
+  color?: keyof typeof button_color;
   onClick?(): void;
 };
 
@@ -94,20 +79,20 @@ const styles = style9.create({
   },
 });
 
-const button_color = style9.create<typeof Color>({
+const button_color = style9.create({
   blue: {
-    color: BLUE,
+    color: "dodgerblue",
   },
   green: {
-    color: GREEN,
+    color: "#57b004",
   },
   yellow: {
-    color: YELLOW,
+    color: "#cccccc",
   },
   red: {
-    color: RED,
+    color: "#db2e02",
   },
   grey: {
-    color: GREY,
+    color: "#e3b307",
   },
 });
